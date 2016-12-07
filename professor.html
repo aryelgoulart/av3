@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css\professor.css">
+	<script type="text/javascript" src="script.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+	<nav class="navbar navbar-default" id="menu">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" id="logo" href="agenda.html"><img src="imagens\logo.png" id="logoimg"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav men">
+					<li class=""><a href="agenda.html">Agenda<span class="sr-only">(current)</span></a></li>
+					<li><a href="comunicados.html">Comunicados</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planejamento <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="arquivos.html">Moderação de arquivos</a></li>
+							<li><a href="grade.html">Montar grade</a></li>
+							
+							<li><a href="pagina.html">Docentes</a></li>
+							
+							<li><a href="pagina2.html">Curriculos</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordenação <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="alunos.html">Alunos</a></li>
+							<li><a href="#">Professores</a></li>
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<div class="barra">
+
+					<form class="navbar-form">
+						
+						<div class="input-group">
+							<span class="input-group-addon" id="pes">
+								<!--  <button class="fa fa-searc" style="background:transparent;border:none"><img src="imagens\pes.png" class="icon" id="pesimagem"></button> -->
+
+							</span>
+							
+							<div class="input-group divBusca">
+								<input type="text" class="form-control" id="pesquisar" placeholder= "Buscar"  >
+								<a href="#"><img src="imagens/pes.png" class="btnBusca" alt="Buscar"/></a>
+							</div>
+						</div>
+						
+						<a href="#"><img src="imagens\login.png" class="loginimg"></a> 
+					</div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="titulo">
+
+		<h3>ALUNOS	</h3>
+	</div>
+
+
+	<div class="primeiraParte">
+		<div class="row combProf">
+
+			<div class="col-sm-2">
+				<div class="column">
+					<h4 class="col-sm-4">Curso:</h4>
+					<select class="selectpicker combobo"  >
+						<option value="selecione"> < Selecione > </option>
+						<option value="Design">Design</option>
+						<option value="Sistemas">Sistemas</option>
+						<option value="Contabeis">Ciências Contábeis</option>
+						<option value="Adm">Administração</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="column">
+					<h4 class="col-sm-3">Fase:</h4>
+					<select class="selectpicker combobo"  >
+						<option value="selecione"> < Selecione > </option>
+						<option value="1">1º</option>
+						<option value="2">2º</option>
+						<option value="3">3º</option>
+						<option value="4">4º</option>
+						<option value="5">5º</option>
+						<option value="6">6º</option>
+						<option value="7">7º</option>
+						<option value="8">8º</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="column">
+					<h4 class="col-sm-3">Disciplina:</h4>
+					<select class="selectpicker combobo" >
+						<option value="selecione"> < Selecione > </option>
+						<option value="Mkt">MKT Design</option>
+						<option value="Poo">POO</option>
+						<option value="Cont">Contabilidade</option>
+						<option value="Model">Modelagem</option>
+					</select>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div class="container">
+		<div class="menuRadio">			
+			
+			<div class="btn-group" data-toggle="buttons" id="btradioPro">
+				
+				<label class="btn btn-primary active" id="btPen" onClick="mostrarPen(this)">
+					<input type="radio" name="options" autocomplete="off" value="pendencias" checked> PENDÊNCIAS	
+				</label>
+				
+				<label class="btn btn-primary" id="btMat" onClick="mostrarPen(this)">
+					<input type="radio" name="options"  autocomplete="off" value="materias" > MATERIAIS POSTADOS
+				</label>
+			</div>
+		</div>	
+		
+
+		<div id="professor">
+			
+			<div class="col-md-12 disc">
+
+				<div class="row caixa2">
+					<h3 class="col-sm-8">Professor</h3> 
+					<h3 class="col-sm-2 alin">Nota</h3>
+					<h3 class="col-sm-2 alin">Material</h3>
+					
+				</div>	
+				<div class="row caixa">
+					<h4 class="col-sm-8">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Sim</h4>
+					<h4 class="col-sm-2 alin">Sim</h4>
+					
+				</div>
+				<div class="row caixa2">
+					<h4 class="col-sm-8">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Não</h4>
+					<h4 class="col-sm-2 alin">Não</h4>
+					
+				</div>	
+				<div class="row caixa">
+					<h4 class="col-sm-8">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Sim</h4>
+					<h4 class="col-sm-2 alin">Não</h4>
+					
+				</div>	
+				<div class="row caixa2">
+					<h4 class="col-sm-8">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Não</h4>
+					<h4 class="col-sm-2 alin">Sim</h4>
+					
+				</div>	
+				<div class="row caixa">
+					<h4 class="col-sm-8">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Sim</h4>
+					<h4 class="col-sm-2 alin">Não</h4>
+					
+				</div>	
+				
+			</div>
+
+
+		</div>
+
+		<div id="material">
+			
+			<div class="col-md-12 disc">
+
+				<div class="row caixa2">
+					<h3 class="col-sm-6">Professor</h3> 
+					<h3 class="col-sm-2 alin">Disciplina</h3>
+					<h3 class="col-sm-2 alin">Material</h3>
+					<h3 class="col-sm-2 alin">Data</h3>
+					
+				</div>	
+				<div class="row caixa">
+					<h4 class="col-sm-6">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin" >Processos Gráficos</h4>
+					<h4 class="col-sm-2 alin" >Industria Gráfica</h4>
+					<h4 class="col-sm-2 alin" >25/10/2016</h4>
+					
+				</div>
+				<div class="row caixa2">
+					<h4 class="col-sm-6">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Processos Gráficos</h4>
+					<h4 class="col-sm-2 alin">Industria Gráfica</h4>
+					<h4 class="col-sm-2 alin">25/10/2016</h4>
+					
+				</div>	
+				<div class="row caixa">
+					<h4 class="col-sm-6">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Processos Gráficos</h4>
+					<h4 class="col-sm-2 alin">Industria Gráfica</h4>
+					<h4 class="col-sm-2 alin">25/10/2016</h4>
+				</div>	
+				<div class="row caixa2">
+					<h4 class="col-sm-6">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Processos Gráficos</h4>
+					<h4 class="col-sm-2 alin">Industria Gráfica</h4>
+					<h4 class="col-sm-2 alin">25/10/2016</h4>
+					
+				</div>	
+				<div class="row caixa">
+					<h4 class="col-sm-6">CARLOS DOS SANTOS PEREIRA</h4> 
+					<h4 class="col-sm-2 alin">Processos Gráficos</h4>
+					<h4 class="col-sm-2 alin">Industria Gráfica</h4>
+					<h4 class="col-sm-2 alin">25/10/2016</h4>
+					
+				</div>	
+				
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+</body>
+</html>

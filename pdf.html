@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous">
+	
+</script>
+
+<!-- Última versão JavaScript compilada e minificada -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css\pdf.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<nav class="navbar navbar-default" id="menu">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" id="logo" href="agenda.html"><img src="imagens\logo.png" id="logoimg"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav men">
+					<li class=""><a href="agenda.html">Agenda<span class="sr-only">(current)</span></a></li>
+					<li><a href="comunicados.html">Comunicados</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planejamento <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="arquivos.html">Moderação de arquivos</a></li>
+							<li><a href="grade.html">Montar grade</a></li>
+							
+							<li><a href="pagina.html">Docentes</a></li>
+							
+							<li><a href="pagina2.html">Curriculos</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordenação <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="alunos.html">Alunos</a></li>
+							<li><a href="professor.html">Professores</a></li>
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<div class="barra">
+
+					<form class="navbar-form">
+						
+						<div class="input-group">
+							<span class="input-group-addon" id="pes">
+								<!--  <button class="fa fa-searc" style="background:transparent;border:none"><img src="imagens\pes.png" class="icon" id="pesimagem"></button> -->
+
+							</span>
+							
+							<div class="input-group divBusca">
+								<input type="text" class="form-control" id="pesquisar" placeholder= "Buscar"  >
+								<a href="#"><img src="imagens/pes.png" class="btnBusca" alt="Buscar"/></a>
+							</div>
+						</div>
+						
+						<a href="#"><img src="imagens\login.png" class="loginimg"></a> 
+					</div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+
+
+	<div>
+		
+		
+
+		<div>
+			
+			<iframe src="docc.pdf" class="pdf"></iframe>
+		</div>
+	</div>
+
+	<div id="botoes">
+		
+		<a href="arquivos.html" class="btn ver" role="button">AUTORIZAR</a>
+		<a href="arquivos.html" class="btn ver" role="button">RECUSAR</a>
+
+	</div>
+
+	
+</body>
+</html>

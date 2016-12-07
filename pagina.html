@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css\paginacss.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Asap|Cantarell" rel="stylesheet">
+	
+	
+
+</head>
+<body>
+	<nav class="navbar navbar-default" id="menu">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" id="logo" href="agenda.html"><img src="imagens\logo.png" id="logoimg"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav men">
+					<li class=""><a href="agenda.html">Agenda<span class="sr-only">(current)</span></a></li>
+					<li><a href="comunicados.html">Comunicados</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planejamento <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="arquivos.html">Moderação de arquivos</a></li>
+							<li><a href="grade.html">Montar grade</a></li>
+							
+							<li><a href="#">Docentes</a></li>
+							
+							<li><a href="pagina2.html">Curriculos</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordenação <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="alunos.html">Alunos</a></li>
+							<li><a href="professor.html">Professores</a></li>
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<div class="barra">
+
+					<form class="navbar-form">
+						
+						<div class="input-group">
+							<span class="input-group-addon" id="pes">
+								<!--  <button class="fa fa-searc" style="background:transparent;border:none"><img src="imagens\pes.png" class="icon" id="pesimagem"></button> -->
+
+							</span>
+							
+							<div class="input-group divBusca">
+								<input type="text" class="form-control" id="pesquisar" placeholder= "Buscar"  >
+								<a href="#"><img src="imagens/pes.png" class="btnBusca" alt="Buscar"/></a>
+							</div>
+						</div>
+						
+						<a href="#"><img src="imagens\login.png" class="loginimg"></a> 
+					</div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="titulo">
+
+		<h3>DOCENTES NA INSTITUIÇÃO </h3>
+	</div>
+
+
+	
+	<div class="primeiraparte">
+		
+		<div class="row fundo">
+			<div class="botaoPrimeira ">
+
+				<div class="col-sm-1 buss">
+					<h3>Buscar por:</h3>
+					
+				</div>
+				
+				<form class="navbar-form primeira  role="search">
+					<div class="col-sm-2" id="s">
+						<select class="selectpicker" id="combo">
+							<option>Nome</option>
+							<option>Titulação</option>
+							<option>Curso</option>
+							<option>Disciplina</option>
+						</select>
+
+					</div>
+					<div class="col-sm-5">
+
+						<div class="input-group divBusca">
+							<input type="text" class="form-control" id="busca" placeholder= "Buscar"  >
+							<a href="#"><img src="imagens/pes.png" class="btnBusca" alt="Buscar"/></a>
+						</div>
+						
+					</div>
+				</form>
+				<div class="text col-sm-2">
+					<h6>Adicionar</h6>
+					<h6>Docentes</h6>
+
+				</div>
+				<div class="col-sm-2 mais">
+
+					<a href="#abrirModal"><img src="imagens/mais2.png"  alt="Adicionar novo" class="imgmais" /></a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div id="abrirModal" class="modalDialog">
+
+			<div>
+				<a class="close" title="Fechar" href="#close">X</a>
+
+				<div class="tit">
+					
+					
+					<h3>Adicionar Docente</h3>
+
+				</div>
+				<div class="corpoModal">
+					
+					
+					
+					<div class="form-group">
+						<label for="exampleInputEmail1">NOME:</label>
+						<input type="text" class="form-control input"  placeholder="Nome">
+						<h5>----------------------------------------------------------------------------------------------</h5>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">TITULAÇÃO</label>
+						<input type="text" class="form-control input"  placeholder="Titulação">
+						<h5>----------------------------------------------------------------------------------------------</h5>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">CURSO</label>
+						<select class="selectpicker" id="comboModal">
+							<option>< Selecione ></option>
+							<option>Sistemas</option>
+							<option>ADM</option>
+							<option>Design</option>
+							<option>Ciencias Contabeis</option>
+						</select>
+						<h5>----------------------------------------------------------------------------------------------</h5>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">DISCIPLINA</label>
+						<select class="selectpicker" id="comboModal2">
+							<option>< Selecione ></option>
+							<option>POO</option>
+							<option>Design</option>
+							<option>Modelagem</option>
+							<option>Contabilidade</option>
+						</select>
+						<h5>----------------------------------------------------------------------------------------------</h5>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputFile">Anexar arquivo</label>
+						<input type="file" id="exampleInputFile">
+						<p class="help-block">Anexar arquivos em pdf ou .doc</p>
+					</div>
+					<h5>----------------------------------------------------------------------------------------------</h5>
+					<div class="posbt">
+						<a class="btn  btt" href="pagina.html" role="button">Salvar</a>
+						<a class="btn  btt" href="pagina.html" role="button">Cancelar</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="container">
+
+			
+			<div id="cent">
+
+				<div class="segundaParte ">
+					<h3>Resultados</h3>
+
+					<div class="row caixa" >
+						<div class="primeiracol col-md-4">
+							<h5 class="hh5">Ademir</h5> </ br>
+							<h6 class="hh6">Designer Gráfico</h6>					
+						</div>
+						<div class="segundacol col-md-5">
+							<h5 class="hh5">Designer Gráfico</h5> </ br>
+							<h6 class="hh6"> Evolução do Designer</h6>
+						</div>
+						<div class="terceiracol col-md-3">
+							<a href="#"><img src="imagens\lupa.png" class="pesquisar"></a>
+						</div>
+
+						
+					</div>
+
+					<div class="row caixa2" >
+						<div class="primeiracol col-md-4">
+							<h5 class="hh5">Carlos Alberto Torres</h5> </ br>
+							<h6 class="hh6">Historiador</h6>					
+						</div>
+						<div class="segundacol col-md-5">
+							<h5 class="hh5">Designer Gráfico</h5> </ br>
+							<h6 class="hh6">Historia da arte</h6>
+						</div>
+						<div class="terceiracol col-md-3">
+							<a href="#"><img src="imagens\lupa.png" class="pesquisar"></a>
+						</div>
+
+						
+					</div>
+
+					<div class="row caixa" >
+						<div class="primeiracol col-md-4">
+							<h5 class="hh5">Geovanni Dias</h5> </ br>
+							<h6 class="hh6">Designer Gráfico</h6>					
+						</div>
+						<div class="segundacol col-md-5">
+							<h5  class="hh5">Designer Gráfico</h5> </ br>
+							<h6 class="hh6">Tipografia</h6>
+						</div>
+						<div class="terceiracol col-md-3">
+							<a href="#"><img src="imagens\lupa.png" class="pesquisar"></a>
+						</div>
+
+						
+					</div>
+
+					<div class="row caixa2" >
+						<div class="primeiracol col-md-4">
+							<h5 class="hh5">Guilherme Cardoso</h5> </ br>
+							<h6 class="hh6">Engenheiro</h6>					
+						</div>
+						<div class="segundacol col-md-5">
+							<h5 class="hh5">Designer Gráfico</h5> </ br>
+							<h6 class="hh6">Metodologia cientifica</h6>
+						</div>
+						<div class="terceiracol col-md-3">
+							<a href="#"><img src="imagens\lupa.png" class="pesquisar"></a>
+						</div>
+
+						
+					</div>
+					<div class="row caixa" >
+						<div class="primeiracol col-md-4">
+							<h5 class="hh5">Vanessa da Mata</h5> </ br>
+							<h6 class="hh6">Ciencia da computação</h6>					
+						</div>
+						<div class="segundacol col-md-5">
+							<h5 class="hh5">Designer Gráfico</h5> </ br>
+							<h6 class="hh6">Estrutura Html</h6>
+						</div>
+						<div class="terceiracol col-md-3">
+							<a href="#"><img src="imagens\lupa.png" class="pesquisar"></a>
+						</div>
+
+						
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+</html>

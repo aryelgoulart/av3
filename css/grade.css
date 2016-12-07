@@ -1,0 +1,362 @@
+html{
+	margin:auto;
+	align-items: center;
+}
+
+body{
+	background-color: #373d4f;
+	color: white;
+
+}
+#menu{
+	background-color: #1d1a52;
+	color: white;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+	border:0;
+	border-radius: 0;
+
+}
+.menumenu{
+background-color: transparent;
+padding: 0;
+
+
+}
+
+.menumenu li a{
+	color: white;
+
+
+}
+.menumenu li{
+	margin-bottom: 5px;
+	
+	padding: 10px;
+	background-color: #1d1a52;
+	:last-child{
+		margin-bottom:0px;
+	}
+
+}
+
+.menumenu li:last-child{
+	margin-bottom: 0;
+}
+
+#logo{
+margin-top: 0;
+margin-bottom: 0;
+margin-right: 10px;
+margin-left: 1px;
+
+padding: 7px;
+}
+#logoimg{
+	width: 135px;
+	height: 35px;
+	margin-top: 5px;
+
+}
+#pes {
+    padding:0;
+    background-color:#223870;
+    border:0;
+
+    
+}
+#pesimagem{
+	width: 25px;
+	height: 25px;
+}
+.loginimg{
+	margin-left: 50px;
+	margin-bottom: 0px;
+}
+
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 45px;
+    margin-top: 3px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.barra{
+	padding: 2px;
+}
+.container{
+	padding-top: 25px;
+	padding-left: 0;
+	margin-left: 70px;
+	margin-right: 20px;
+	width: 90%;
+	
+}
+
+.btn{
+	border-radius: 0;
+	background-color: #a7a9ab;
+	padding: 8px 40px 8px 40px;
+	font-weight: bold;
+}
+.bot{
+	margin-right: 15px;
+}
+
+#busca{
+	float:left;
+  
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:27px;
+  width:350px;
+	 border-radius: 30px;
+
+	
+}
+#pesquisar{
+	float:left;
+  
+  padding-left:5px;
+  
+  font-size:15px;
+  border:none;
+  height:23px;
+  width:250px;
+	 border-radius: 30px;
+
+	
+}
+.divBusca{
+  background-color:white;
+  border:solid 1px;
+  border-radius: 30px;
+  
+  
+}
+.btnBusca{
+margin-right: 25px;
+margin-top: 2px;
+}
+.text{
+	
+	text-align: right;
+	padding: 0;
+	
+}
+.text h6{
+	font-size: 15px;
+	margin:0;
+
+}
+.mais{
+	padding: 0;
+}
+.imgmais{
+	width: 37px;
+	height: 37px;
+	
+}
+.mais h6{
+	margin:0;
+	width: 50px;
+
+}
+.titulo{
+	background-color: #286e9c;
+	margin:0;
+	font-weight: normal;
+}
+.titulo h3{
+	background-color: #286e9c;
+
+	margin:0 0 0 20px;
+	border:0;
+	color: white;
+	padding: 10px 10px 10px 26px;
+	padding-right: 20px;
+}
+.combobo{
+	background-color: #50555e;
+	padding: 8px;
+	
+	margin-bottom: 5px;
+	margin: 0;
+
+}
+.combAluno h4{
+	margin:0;
+	width: auto;
+	font-weight: bold;
+}
+#notas{
+	margin-top: 5px;
+	
+	border:1px solid;
+	background-color: transparent;
+}
+
+
+
+
+
+ 
+
+.primeiraParte{
+	width: 100%;
+	background-color: #50555e;
+}
+.combAluno{
+	margin-right: 0;
+	padding: 20px;
+	margin-left: 20px;
+}
+
+#disc {
+   
+    margin-top: 4px;
+
+}
+.terceiracol{
+	margin-top: 8px;
+}
+.segundacol img{
+	margin-top: 170px;
+	margin-left: 27px;
+
+}
+
+.btt{
+	background-color: #50555e;
+	border-radius: 20px;
+	border: 1px solid white;
+	color: white;
+	margin-right: 5px;
+	width: 180px;
+	text-align: center;
+}
+.btSal{
+	text-align: right;
+	margin-top: 40px;
+}
+
+.modalDialog {
+position: fixed;
+font-family: Arial, Helvetica, sans-serif;
+
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: transparent;
+z-index: 99999;
+opacity:0;
+-webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+pointer-events: none;
+overflow:scroll; /* activa scroll da página se a modal for muito comprida */
+}
+.modalDialog:target {
+opacity:1;
+pointer-events: auto;
+}
+ 
+.modalDialog > div {
+width: 700px;
+position: relative;
+margin: 5% auto;
+padding: 0px 0px 13px 0px;
+
+background-color: #50555e;
+
+ 
+-moz-box-shadow: 1px 1px 30px #000;
+-webkit-box-shadow: 1px 1px 30px #000;
+box-shadow: 1px 1px 30px #000;
+}
+
+.close {
+background: #606061;
+color: black;
+line-height: 25px;
+position: absolute;
+right: -12px;
+text-align: center;
+top: -10px;
+width: 24px;
+text-decoration: none;
+font-weight: bold;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+-moz-box-shadow: 1px 1px 3px #000;
+-webkit-box-shadow: 1px 1px 3px #000;
+box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: black; }
+
+.modalpic {
+float: left;
+padding: 6px;
+width: 300px;
+display: block;
+border: 4px solid #ffffff;
+border-radius: 30%;
+box-shadow: 3px 6px 8px 1px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 3px 6px 8px 1px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 3px 6px 8px 1px rgba(0, 0, 0, 0.3);
+margin-right: 100%;
+margin-bottom: 20px;
+}
+#comboModal{
+	
+	background-color: #373d4f;
+	padding: 5px;
+	margin-bottom: 5px;
+
+
+}
+.corpoModal{
+	padding: 15px;
+	background-color: #373d4f;
+	margin-left: 30px;
+	margin-top: 30px;
+	width: 90%;
+}
+.corpoModal h3{
+	margin-top: 0;
+	font-weight: bold;
+}
+.corpoModal h4{
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.tit{
+	padding: 5px;
+}
+.cursoCombo{
+	margin-left: 20px;
+}
+
+.posbt{
+	margin-top: 15px;
+	text-align: right;
+	margin-right: 35px;
+}
+.bttModal{
+	background-color: #50555e;
+	border-radius: 20px;
+	border: 1px solid white;
+	color: white;
+	margin-right: 30px;
+	width: 180px;
+	text-align: center;
+}

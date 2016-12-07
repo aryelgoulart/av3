@@ -1,0 +1,210 @@
+html{
+	margin:auto;
+	align-items: center;
+}
+
+body{
+	
+	color: white;
+
+}
+#menu{
+	background-color: #1d1a52;
+	color: white;
+	align-items: center;
+	text-align: center;
+	margin: 0;
+	border:0;
+	border-radius: 0;
+
+}
+.menumenu{
+background-color: transparent;
+padding: 0;
+
+
+}
+
+.menumenu li a{
+	color: white;
+
+
+}
+.menumenu li{
+	margin-bottom: 5px;
+	
+	padding: 10px;
+	background-color: #1d1a52;
+	:last-child{
+		margin-bottom:0px;
+	}
+
+}
+
+.menumenu li:last-child{
+	margin-bottom: 0;
+}
+
+#logo{
+margin-top: 0;
+margin-bottom: 0;
+margin-right: 10px;
+margin-left: 1px;
+
+padding: 7px;
+}
+#logoimg{
+	width: 135px;
+	height: 35px;
+	margin-top: 5px;
+
+}
+#pes {
+    padding:0;
+    background-color:#223870;
+    border:0;
+
+    
+}
+#pesimagem{
+	width: 25px;
+	height: 25px;
+}
+.loginimg{
+	margin-left: 50px;
+	margin-bottom: 0px;
+}
+
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 45px;
+    margin-top: 3px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.barra{
+	padding: 2px;
+}
+.container{
+	padding-top: 45px;
+	width: 90%;
+}
+
+.btn{
+	border-radius: 0;
+	background-color: #a7a9ab;
+	padding: 8px 40px 8px 40px;
+	font-weight: bold;
+}
+.bot{
+	margin-right: 15px;
+}
+
+#busca{
+	float:left;
+  
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:27px;
+  width:350px;
+	 border-radius: 30px;
+
+	
+}
+#pesquisar{
+	float:left;
+  
+  padding-left:5px;
+  
+  font-size:15px;
+  border:none;
+  height:23px;
+  width:250px;
+	 border-radius: 30px;
+
+	
+}
+.divBusca{
+  background-color:white;
+  border:solid 1px;
+  border-radius: 30px;
+  
+  
+}
+.btnBusca{
+margin-right: 25px;
+margin-top: 2px;
+}
+.text{
+	
+	text-align: right;
+	padding: 0;
+	
+}
+.text h6{
+	font-size: 15px;
+	margin:0;
+
+}
+.mais{
+	padding: 0;
+}
+.imgmais{
+	width: 37px;
+	height: 37px;
+	
+}
+.mais h6{
+	margin:0;
+	width: 50px;
+
+}
+
+#scroll {
+  width:300px;
+  height:170px;
+  background-color:#F2F2F2;
+  overflow:auto;
+  color: black;
+  width: 50%;
+  height: 50%;
+  margin-top: 50px;
+}
+
+.pdf{
+	width: 100%;
+	height: 550px;
+	
+	border:0;
+	margin-bottom: 0;
+
+}
+
+#botoes{
+	text-align: right;
+	color: black;
+	margin-right: 50px;
+	font-weight: normal;
+	text-decoration: none;
+	
+	margin-top: 0;
+
+}
+.ver{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 20px;
+}
+#botoes a{
+	
+	text-decoration: none;
+	color: black;
+}
+.paper-toolbar{
+	background-color: green !important;
+}

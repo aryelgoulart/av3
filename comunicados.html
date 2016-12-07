@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css\comunicadoscss.css">
+	<script type="text/javascript" src="script.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	
+</head>
+<body>
+	<nav class="navbar navbar-default" id="menu">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" id="logo" href="agenda.html"><img src="imagens\logo.png" id="logoimg"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav men">
+					<li class=""><a href="agenda.html">Agenda<span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Comunicados</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planejamento <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="arquivos.html">Moderação de arquivos</a></li>
+							<li><a href="grade.html">Montar grade</a></li>
+							
+							<li><a href="pagina.html">Docentes</a></li>
+							
+							<li><a href="pagina2.html">Curriculos</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordenação <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="alunos.html">Alunos</a></li>
+							<li><a href="professor.html">Professores</a></li>
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<div class="barra">
+
+					<form class="navbar-form">
+						
+						<div class="input-group">
+							<span class="input-group-addon" id="pes">
+								<!--  <button class="fa fa-searc" style="background:transparent;border:none"><img src="imagens\pes.png" class="icon" id="pesimagem"></button> -->
+
+							</span>
+							
+							<div class="input-group divBusca">
+								<input type="text" class="form-control" id="pesquisar" placeholder= "Buscar"  >
+								<a href="#"><img src="imagens/pes.png" class="btnBusca" alt="Buscar"/></a>
+							</div>
+						</div>
+						
+						<a href="#"><img src="imagens\login.png" class="loginimg"></a> 
+					</div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="titulo">
+
+		<h3>COMUNICADOS </h3>
+	</div>
+
+
+	<div class="container">
+		<div class="primeiraparte">
+			
+			<div class="column">
+				
+
+				<div class="col-sm-12 disc">
+					<div class="row cabe">
+						<h3 class="col-sm-6">CONVERSAS</h3> 
+						
+						<h3 class="col-sm-4">ASSUNTO</h3>
+
+						<div class="text col-sm-1">
+							<h6>NOVO</h6>
+							
+
+						</div>
+						<div class="col-sm-1 mais">
+
+							<a href="#abrirModal"><img src="imagens/mais.png"  alt="Adicionar novo" class="imgmais" /></a>
+						</div>
+					</div>
+
+
+
+					<div id="abrirModal" class="modalDialog">
+
+						<div>
+							<a class="close" title="Fechar" href="#close">X</a>
+
+							<div class="column">
+
+								<div class="col-sm-3 comboModall">
+
+									<select class="selectpicker" id="combo" onchange="mostrarProfessores(this)">
+										<option value="selecione"> < Selecione destinatário > </option>
+
+										<option value="professor">Professor</option>
+										<option value="fase">Fase</option>
+										<option value="materia">Materia</option>
+										<option value="individual">Individual</option>
+									</select>
+
+
+									<div class="checkbox" id="chec">
+										<label>
+											<input type="checkbox" id="Genilda" onclick="mostra(this)" value="Genilda Araujo"> Genilda Araujo
+										</label>
+										<label>
+											<input type="checkbox" id="Ildo" onclick="mostra(this)" value="Ildo Golfeto" "> Ildo Golfeto
+										</label>
+										<label>
+											<input type="checkbox" id="Maria" onclick="mostra(this)" value="Maria dos santos"> Maria dos santos
+										</label>
+										<label>
+											<input type="checkbox" id="Joao" onclick="mostra(this)" value="Joao dos santos"> Joao dos santos
+										</label>
+										<label>
+											<input type="checkbox" id="Mariana" onclick="mostra(this)" value="Mariana dos santos"> Mariana dos santos
+										</label>
+										<label>
+											<input type="checkbox" id="Pedro" onclick="mostra(this)" value="Pedro dos santos"> Pedro dos santos
+										</label>
+									</div>
+
+									<div class="checkbox" id="checFase">
+										<label>
+											<input type="checkbox" id="Primeira" onclick="mostra(this)" value="Primeira Fase"> Primeira Fase
+										</label>
+										<label>
+											<input type="checkbox" id="Segunda" onclick="mostra(this)" value="Segunda Fase" "> Segunda Fase
+										</label>
+										<label>
+											<input type="checkbox" id="Terceira" onclick="mostra(this)" value="Terceira Fase"> Terceira Fase
+										</label>
+										<label>
+											<input type="checkbox" id="Quarta" onclick="mostra(this)" value="Quarta Fase"> Quarta Fase
+										</label>
+										<label>
+											<input type="checkbox" id="Quinta" onclick="mostra(this)" value="Quinta Fase"> Quintaa  Fase
+										</label>
+										<label>
+											<input type="checkbox" id="Sexta" onclick="mostra(this)" value="Sexta Fase"> Sextaa   fasee
+										</label>
+										<label>
+											<input type="checkbox" id="Setimo" onclick="mostra(this)" value="Setima Fase"> Setiima   fasee
+										</label>
+										<label>
+											<input type="checkbox" id="Oitava" onclick="mostra(this)" value="Oitava Fase"> Oitava   fase
+										</label>
+									</div>
+									<div class="checkbox" id="checMateria">
+										<label>
+											<input type="checkbox" id="Programacao" onclick="mostra(this)" value="Programação Web"> Programação Web
+										</label>
+										<label>
+											<input type="checkbox" id="Engenharia" onclick="mostra(this)" value="Engenharia" "> Engenharia 
+										</label>
+										<label>
+											<input type="checkbox" id="Modelagem" onclick="mostra(this)" value="Modelagem"> Modelagem Processos
+										</label>
+										<label>
+											<input type="checkbox" id="Programacao" onclick="mostra(this)" value="Programação 3"> Programação 3
+										</label>
+										<label>
+											<input type="checkbox" id="Contabilidade" onclick="mostra(this)" value="Contabilidade"> Contabilidade
+										</label>
+
+									</div>
+									<div class="checkbox" id="checIndividual">
+										<label>
+											<input type="checkbox" id="Ronaldinho" onclick="mostra(this)" value="Ronaldinho"> Ronaldinho
+										</label>
+										<label>
+											<input type="checkbox" id="Pedru" onclick="mostra(this)" value="Pedro Ramos" "> Pedro Ramos
+										</label>
+										<label>
+											<input type="checkbox" id="Jhow" onclick="mostra(this)" value="Jhow Jhow"> Jhow Jhow
+										</label>
+										<label>
+											<input type="checkbox" id="Mendonça" onclick="mostra(this)" value="Mendonça"> Mendonça Pastel
+										</label>
+										<label>
+											<input type="checkbox" id="Agostinho" onclick="mostra(this)" value="Agostinho Carrara"> Agostinho Carrara
+										</label>
+
+									</div>
+
+
+								</div>
+								<div class="col-sm-9 segundaparteModal">
+
+									<h3>Nova Mensagem</h3>
+
+									<div class="form-group desti">
+										<label for="exampleInputEmail1">DESTINATÁRIO:
+
+											<div id="mostraEmail">
+											
+											</div></label>
+
+										</div>
+										<div class="form-group">
+											<label for="exampleInputEmail1">ASSUNTO</label>
+											<input type="text" class="form-control input"  placeholder="ASSUNTO">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputFile">Anexar arquivo</label>
+											<input type="file" id="exampleInputFile">
+											<p class="help-block">Anexar arquivos em pdf ou .doc</p>
+										</div>
+
+										<div class="form-group textfor">
+											<textarea rows="10" cols="85" maxlength="85"></textarea>
+										</div>
+
+									</div>
+
+
+								</div>
+
+
+
+								<div class="posbt">
+									<a class="btn  btt" href="comunicados.html" role="button">Enviar</a>
+									<a class="btn  btt" href="comunicados.html" role="button">Cancelar</a>
+
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="row caixa">
+							<h4 class="col-sm-6">7º fase</h4> 
+							<h4 class="col-sm-4">Comunicado importante</h4>
+							<div class="col-sm-2 pesCorpo">
+							<a href="conversa.html"><img src="imagens\lupa.png" ></a>
+							</div>
+						</div>
+						<div class="row caixa2">
+							<h4 class="col-sm-6">7º fase</h4> 
+							<h4 class="col-sm-4">Comunicado importante</h4>
+							<div class="col-sm-2 pesCorpo">
+								<a href="conversa.html"><img src="imagens\lupa.png" ></a>
+							</div>
+						</div>	
+						<div class="row caixa">
+							<h4 class="col-sm-6">7º fase</h4> 
+							<h4 class="col-sm-4">Comunicado importante</h4>
+							<div class="col-sm-2 pesCorpo">
+								<a href="conversa.html"><img src="imagens\lupa.png" ></a>
+							</div>
+						</div>	
+						<div class="row caixa2 ">
+							<h4 class="col-sm-6">Usabilidade</h4> 
+							<h4 class="col-sm-4">Entrega de trabalho</h4>
+							<div class="col-sm-2 pesCorpo">
+								<a href="conversa.html"><img src="imagens\lupa.png"></a>
+							</div>
+
+						</div>	
+						<div class="row caixa">
+							<h4 class="col-sm-6">7º Fase </h4> 
+
+							<h4 class="col-sm-4">Componentes da camera</h4>
+							<div class="col-sm-2 pesCorpo">
+								<a href="conversa.html"><img src="imagens\lupa.png" class="pesCorpo"></a>
+							</div>
+						</div>	
+					</div>
+
+
+
+
+
+
+
+
+
+
+				</div>
+
+			</div>
+
+
+
+
+		</div>
+
+
+	</body>
+	</html>

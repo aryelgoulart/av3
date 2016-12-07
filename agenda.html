@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css\agenda.css">
+	<script type="text/javascript" src="script.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	
+	<script>
+		$(function(){
+			$('#calendario').datepicker({
+                          buttonImage: "calendario.png",    // adicionamos a url da imagem
+                          showOn: "button",
+                          buttonImageOnly: true,
+                          dateFormat:'dd-mm-yy',
+                          showOtherMonths: true,
+                          selectOtherMonths: true,
+                          dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+                          dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+                          dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+                          monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                          monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+                          onSelect: function(text, inst){
+  				  $("#data").text(text); //Mostrando data em elemento da página
+  				  
+
+  				  switch(text)
+  				  {
+  				  	case "21-12-2016" : $("#21-12-2016").css("display","block"); $("#05-12-2016").css("display","none");break;
+  				  	case "05-12-2016" :  $("#21-12-2016").css("display","none"); $("#05-12-2016").css("display","block");break;
+  				  	default:  $("#21-12-2016").css("display","none"); $("#05-12-2016").css("display","none");
+  				  }
+
+  				  
+  				}
+  				
+
+
+  			});
+		});
+	</script>
+
+
+
+	
+	
+
+
+</head>
+<body>
+	<nav class="navbar navbar-default" id="menu">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" id="logo" href="agenda.html"><img src="imagens\logo.png" id="logoimg"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav men">
+					<li class=""><a href="#">Agenda<span class="sr-only">(current)</span></a></li>
+					<li><a href="comunicados.html">Comunicados</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planejamento <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="arquivos.html">Moderação de arquivos</a></li>
+							<li><a href="grade.html">Montar grade</a></li>
+							
+							<li><a href="pagina.html">Docentes</a></li>
+							
+							<li><a href="pagina2.html">Curriculos</a></li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordenação <span class="caret"></span></a>
+						<ul class="dropdown-menu menumenu">
+							<li><a href="alunos.html">Alunos</a></li>
+							<li><a href="professor.html">Professores</a></li>
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<div class="barra">
+
+					<form class="navbar-form">
+						
+						<div class="input-group">
+							<span class="input-group-addon" id="pes">
+								<!--  <button class="fa fa-searc" style="background:transparent;border:none"><img src="imagens\pes.png" class="icon" id="pesimagem"></button> -->
+
+							</span>
+							
+							<div class="input-group divBusca">
+								<input type="text" class="form-control" id="pesquisar" placeholder= "Buscar"  >
+								<a href="#"><img src="imagens/pes.png" class="btnBusca" alt="Buscar"/></a>
+							</div>
+						</div>
+						
+						<a href="#"><img src="imagens\login.png" class="loginimg"></a> 
+					</div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="titulo">
+
+		<h3>AGENDA</h3>
+	</div>
+	<div class="container">
+
+		<div class="column">
+
+
+			<div class="calen col-md-5">
+				<div id="calendario"></div>
+			</div>
+
+			<div class="col-md-7">
+				<div class="row cabe">
+					
+					
+					<form id="data" class="col-md-9 formss">HOJE</form>
+
+
+
+					
+					
+					<div class="text col-sm-2">
+						<h7>Adicionar</h7>
+						<h7>Compromisso</h7>
+
+					</div>
+					<div class="col-sm-1 mais">
+
+						<a href="#abrirModal"><img src="imagens/add.png"  alt="Adicionar novo" class="imgmais" /></a>
+					</div>
+					
+				</div>
+
+
+
+				
+
+				<div id="21-12-2016" class="segundoQuadro">
+					<div class="row caixa3">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela1.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:30-20:30</h3>
+
+
+						<h3 class="col-sm-6">Reunião</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+
+					<div class="row caixa2">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela2.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-19:30</h3>
+
+
+						<h3 class="col-sm-6">Palestra</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+					<div class="row caixa">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela3.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-22:30</h3>
+
+
+						<h3 class="col-sm-6">Reunião</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+					<div class="row caixa2">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela2.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-22:30</h3>
+
+
+						<h3 class="col-sm-6">Ultima Reunião</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+				</div>
+
+				<div id="05-12-2016">
+					<div class="row caixa3">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela1.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-18:30</h3>
+
+
+						<h3 class="col-sm-6">Reunião com professores</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+
+					<div class="row caixa2">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela2.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-18:30</h3>
+
+
+						<h3 class="col-sm-6">Orientação de TCC</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+					<div class="row caixa">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela3.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-18:30</h3>
+
+
+						<h3 class="col-sm-6">Comissão de formatura</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+					<div class="row caixa2">
+
+						<div class="col-sm-1">
+							
+							<img src="imagens/estrela2.png" class=" imgimg">
+						</div>
+
+						<h3 class="col-sm-3">18:00-18:30</h3>
+
+
+						<h3 class="col-sm-6">Reunião Denis Aluno</h3>
+						<div class="col-sm-2 ediedi">
+							<a href="#"><h5 class=" edi">Editar</h5></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="abrirModal" class="modalDialog">
+
+		<div>
+			<a class="close" title="Fechar" href="#close">X</a>
+
+			<div class="tit">
+				
+				
+				
+				<label>DATA:</label>
+				<input type="date" id="arrival_dt" name="arrival_dt cl" class="input inpdat"  required>
+				
+
+			</div>
+			<div class="corpoModal">
+				
+				
+				
+				<div class="form-group primeiraparteModal">
+					<label for="exampleInputNome">NOME:</label>
+					<input type="text" class="form-control input"  placeholder="Digite seu nome">
+					<h5>----------------------------------------------------------------------------------------------</h5>
+				</div>
+				<div class="form-group primeiraparteModal">
+					<img src="imagens\hora.png">
+					<label for="exampleInputEmail1">Horário a iniciar:</label>
+					<input type="time" name="hora" class="input2">
+					<h5>----------------------------------------------------------------------------------------------</h5>
+				</div>
+				<div class="form-group primeiraparteModal ">
+					<img src="imagens\hora.png">
+					<label for="exampleInputEmail1">Horário a terminar:</label>
+					<input type="time" name="hora" class="input2">
+					<h5>----------------------------------------------------------------------------------------------</h5>
+				</div>
+				<div class="form-group primeiraparteModal">
+					<img src="imagens\local.png" class="localimg">
+					<label for="exampleInputNome">Adicionar local:</label>
+					<input type="text" class="form-control input" >
+					<h5>----------------------------------------------------------------------------------------------</h5>
+				</div>
+				<div class="form-group primeiraparteModal">
+					<img src="imagens\sino.png">
+					<label for="exampleInputNome">Notificação de alarme: 
+						<select class="selectpicker" id="sele" >
+							<option>10 minutos antes</option>
+							<option>15 minutos antes</option>
+							<option>25 minutos antes</option>
+							<option>30 minutos antes</option>
+							<option>35 minutos antes</option>
+						</select>
+					</label> 
+					
+					<h5>----------------------------------------------------------------------------------------------</h5>
+				</div>
+				<div class="form-group primeiraparteModal">
+					<img src="imagens\cor.png" class="corimg">
+					<label for="exampleInputNome">Esquema de cor: 
+						<select class="selectpicker" id="selectcor"  >
+							<option ></option>
+							<option></option>
+							
+						</select>
+					</label> 
+					<h5>----------------------------------------------------------------------------------------------</h5>
+				</div>
+				<div class="form-group primeiraparteModal">
+					<img src="imagens\addusu.png">
+					<label for="exampleInputNome">Adicionar integrantes:
+						<select class="selectpicker" id="sele2" >
+							<option>Por nome</option>
+							<option>Por id</option>
+							<option>Por e-mail</option>
+							
+						</select>
+
+					</label>
+
+					<input type="text" class="form-control input">
+					
+				</div>
+				
+				<div class="posbt">
+					<a class="btn  btt" href="agenda.html" role="button">Salvar</a>
+					<a class="btn  btt" href="agenda.html" role="button">Cancelar</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
